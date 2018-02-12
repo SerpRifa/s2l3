@@ -43,7 +43,7 @@ describe('Компонент CardForm', () => {
           expect(onChangeFormMock).toHaveBeenLastCalledWith('test-name', 'test-value');
         });
       });
-      describe('componentWillUnmount', () => {
+      describe('componentencounteredWillUnmount', () => {
         it('Присутствует', () => {
           expect(wrapper.instance().componentWillUnmount).toBeDefined();
         });
