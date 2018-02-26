@@ -18,8 +18,7 @@ class App extends Component{
     }
 
     componentDidUpdate(){
-        this.setButtonNext();
-        let state = this.state;
+        this.setButtonNext();        
     }
     
     setButtonNext(){        
@@ -33,13 +32,11 @@ class App extends Component{
     }
 
     handleClickNextForm = () => {
-        this.setState({step: this.state.step + 1});
-        console.log('step', this.state.step + 1);
+        this.setState({step: this.state.step + 1});        
 
     }
 
-    handleTabClick = step =>{
-        console.log('step', step);
+    handleTabClick = step =>{        
         this.setState({step: step});
     }
 

@@ -1,27 +1,11 @@
 import React, { Component } from "react";
 import "./Step.css";
 
-class Step extends Component{
-    
-
-    constructor(props){
-         super(props);
-      
-    }
+class Step extends Component{  
     
     handleClick = event => {
-        const {onClick} = this.props;
-        const {isClickable} = this.props; 
-        const {number} = this.props;
-
+        const {onClick, isClickable, number} = this.props;
         if(isClickable) onClick(number);
-    }
-
-    componentWillUnmount(){
-
-    } 
-
-    componentDidUpdate(){        
     }
 
     getClassName({isSelected, isClickable}){
@@ -38,8 +22,7 @@ class Step extends Component{
     }
 
     render(){         
-        const {number} = this.props;        
-        const {children} = this.props;      
+        const {number, children} = this.props;
 
         return (<div className={this.getClassName(this.props)} onClick={this.handleClick} >
             <div className="step__number">{number}</div>
